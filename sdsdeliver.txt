@@ -1,0 +1,47 @@
+ds.deliver.entites
+	Produdct
+		//Equals e Hashcode para que um objeto(produto) seja comparado com outro pelo valor do id
+
+
+	Product implements Serializable
+		//Serializable é uam boa medida para que os objetos do tipo produto possam ser transformados em sequência de bytes 
+
+	Order
+		private Set<Product> products = new HashSet<>();
+			//Sera usado Set ao inves da lista pra não adimitir repetições(o mesmo pedido não pode ter mais de uma ocorrencia do mesmo produto)
+
+	Product 		
+		@Entity
+		@Table(name = "tb_product")
+			//A classe produto é uma entidade que vai ser gerenciada pela ferramente de ORM(JPA)
+
+	Product		
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+			//Instrui o JPA para mapear o id como uma chave primaria auto incremental
+
+	Order
+		@ManyToMany
+		@JoinTable(name = "tb_order_product", 
+			joinColumns = @JoinColumn(name = "order_id"),
+			inverseJoinColumns = @JoinColumn(name = "product_id"))
+				//É um mapeamento para ligar as tabelas(tipo inner join)
+
+
+	package com.devsuperior.dsdeliver.dto;
+
+		import java.io.Serializable;
+
+			import com.devsuperior.dsdeliver.entities.Product;
+
+				//Essa classe é pum objeto para carregar os dados do produto da camada de web para cima(devolver os dados pro front end)
+				public class ProductDTO implements Serializable {  
+
+
+ENDPOINT é para aparecer a lista de produtos e pedidos no front end.
+
+No back end ta usando jpa com hibernate
+
+
+current value
+https://thales-sds2.herokuapp.com

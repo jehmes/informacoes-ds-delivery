@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+code 
+
+ls - ve as pastas
+cd "nome da pasta" - entra na pasta
+
+pra abrir no VS Code
+code .
+
+Abrir a pagina
+npm start
+
+
+pesquisar
+listas(grid)
+useEffect
+
+
+o que é prop (pelo que parece, prop é um nome qualquer que uam classe vai receber via parametros os componentes desses prop
+type Props = {
+    amount: number;
+    totalPrice: number;
+}
+function OrderSummary({amount, totalPrice}: Props) {
+    return (
+        <div className="order-summary-container">
+            <div className="order-summary-content">
+                <div>
+                    <span className="amount-selected-container">
+                        <strong className="amount-selected">{amount}</strong>
+                    PEDIDOS SELECIONADOS
+                </span>
+                    <span className="order-summary-total">
+                        <strong className="amount-selected">{totalPrice}</strong>
+                    VALOR TOTAL
+
+
+function OrderSummary({amount, totalPrice}: Props) {
+
+quando abre e fecha colchete simboliza uma lista vazia
+
+algumas bibliotecas instaladas:
+leaflet (mapa)
+react select
+axio
+ 
+
+//ESSE FORMATO DE SYNTAXE É IGUAL UM METODO NO JAVA
+onSelectProduct: (product : Product) => void;
+
+
+//Entre os parenteses são os parametros que irá receber. Uma lista de produto e um produto
+export function checkIsSelected(selectedProducts: Product[], product: Product) {
+    return selectedProducts.some(item => item.id === product.id);
+}
+
+
+QUANDO EXISTE ISSO ABAIXO, SE CHAMA FRAGMENT. É PARA QUANDO RETORNAR 2 ELEMENTOS NA RAIZ
+<>
+</>
+
+EXEMPLO
+function App() {
+  return (
+    <>
+      <Routes />
+      <ToastContainer />
+    </>
+  );
+}
+
+
+site hospedagem netify
+
+
+.env são variaveis de ambiente com prefixo REACT_APP_ | https://app.netlify.com/sites/sds2-jehmes-thales/settings/deploys#environment | Build & Deploy | Envirironment | Edit | As duas variaveis para se comunicar com o banco Heroku que esta na nuvem > REACT_APP_API_URL
+https://thales-sds2.herokuapp.com

@@ -1,0 +1,51 @@
+o mobile front ta programan
+do em react native
+
+usa-se o expo pra fazer a interação com o mobile
+
+
+o css esta dentro do javascrypt
+
+
+View - igual uma div
+
+
+o axio vai afazer a integraçã com o banco
+
+
+o api.ts é para fazer comunicação com o banco
+
+
+pq colocar key? Todo elemento no react de lista, tem que adicionar o key
+
+
+INSTALOU BIBLIOTECA DAYJS PARA FORMATAR DATA VINDA DO BANCO
+
+
+OBS "TALVEZ O IMPORT DE BIBLIOTECAS TENHA ESSA SYNTAXE" import dayjs from 'dayjs'; 
+"DIFERENTE DE UM ARQUIVO QUE ESTEJA NO PROJETO QUE É ASSIM:" import { Order } from '../types';
+
+
+O const SIGNIFICA QUE É UAM FUNÇÃO
+
+
+a ArrowFuncition {() => {}} é uma função que retorna um objeto
+
+
+É UM METODO PARA FORMATAR PREÇO, MAS NAO FUNCIONAVA BEM NO MOBILE, ENTAO RESOLVI TIRAR
+FICAVA EM OrderCard ABAIXO DE funcition DateFromNow
+
+{/*export function formatPrice(price: number) {
+    const formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 2
+    });
+
+return formatter.format(price);
+}*/}
+
+
+function formatMoney(order: number){
+    return order.toFixed(2).toString().replace(".", ",");
+}
